@@ -69,6 +69,20 @@ class Contenedor {
             console.log('deleteAll(): ', error);
         }
     }
+
+    // Retorna un producto Random de la lista de productos
+    async getRandomProduct() {
+        try {
+            const products = await this.getAll();
+            console.log(products);
+            const keys = Object.keys(products);
+            console.log(keys);
+
+            return products[keys[ keys.length * Math.random() << 0]];
+        } catch (error) {
+            console.log('deleteAll(): ', error);
+        }
+    }
 }
 
 module.exports = Contenedor;

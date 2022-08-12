@@ -9,7 +9,6 @@
   "author": "Marcos Solis Santiago",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1",
-    "nodeman": "^1.1.2"
+    "express": "^4.18.1"
   }
 }

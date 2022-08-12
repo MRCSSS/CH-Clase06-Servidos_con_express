@@ -13,11 +13,7 @@ app.get('/productos', async (request, response) => {
 });
 
 app.get('/productoRandom', async (request, response) => {
-    const products = await cont.getAll();
-    const randomID = Math.floor(Math.random() * (Math.floor(products.length) - Math.ceil(1) + 1) + Math.ceil(1));
-    console.log('products.length',products.length);
-    console.log('randomID',randomID);
-    const randomProduct = await cont.getById(randomID);
+    const randomProduct = await cont.getRandomProduct();
 
     response.send(randomProduct);
 });
